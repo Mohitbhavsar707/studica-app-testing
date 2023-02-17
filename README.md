@@ -1,0 +1,1 @@
+# studica-app-testing
