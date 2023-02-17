@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs</title>
+  <link rel="stylesheet" type="text/css" href="css.css">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+
+<body>
+
+  <img src="./studica.png" style=" max-width: 15%;
+height: auto; display: block;
+margin-left: auto;
+margin-right: auto;">
+
+  <div class="tabContainer">
+    <div class="buttonContainer">
+      <button onclick="showPanel(0)">Firmware Updater</button>
+      <button onclick="showPanel(1)">Model Device Configuration</button>
+      <button onclick="showPanel(2)">Magnetometer Calibration</button>
+      <button onclick="showPanel(3)">NavXUI</button>
+    </div>
+
+
+    <div class="tabPanel">
+
+      <div class="wrap">
+        <div class="floatleft">
+          <h4 class="firmware-upd-header"> Firmware Updater </h4>
+
+
+          <button class="firmwareSelectBtn">Select navX-Model firmware to load</button>
+          <button class="troubleShootingBtn">Troubleshooting Tips</button>
+
+          <!-- <p style="font-size: small; position: relative; margin: 3%; left:45%; ">Text for deviceDirectory</p> -->
+
+          <div style="margin: 0%; color:black">
+
+            <h5 style="margin: 10% 0 0% 2% ;">Manufacturer</h5>
+            <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for manufacturing info</p>
+
+
+            <h5 style="margin: 5% 0 0% 2%  ;">Model</h5>
+            <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for model info</p>
+
+            <h5 style="margin: 5% 0 0% 2%  ;">Version</h5>
+            <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for version info</p>
+
+            <h4 style=" justify-content:center; text-align: center; ">Process</h4>
+            <p style=" font-size:small; justify-content:center; text-align:center;">To update navX-Model Firmware, the
+              device must be in Firmware Update Mode</p>
+          </div>
+
+          <!-- Circles container -->
+          <div class="circle-container">
+            <div class="circle">
+              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                        padding-bottom: 5px;">1<br></span> Disconnect the navX-Model device from the PC USB port</span>
+            </div>
+            <div class="circle">
+              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                    padding-bottom: 5px;">2<br></span> Ensure the device has completely powered down (the RED “3.3V LED
+                must be off).</span>
+            </div>
+            <div class="circle">
+              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                        padding-bottom: 5px;">3<br></span> While holding down the ‘CAL’ button, re-connect the board to
+                the PC USB port.</span>
+            </div>
+            <div class="circle">
+              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                        padding-bottom: 5px;">4<br></span> After the board has powered up, release the ‘CAL’
+                button.</span>
+            </div>
+          </div>
+
+
+          <button class="updNavXButton">Update navX-Model Firmware</button>
+
+          <h5 style="margin: 1% 0 0 2%;">Status:</h5>
+
+
+        </div>
+
+        <div class="floatright">
+          <h4 class="firmware-curr-header">Current Firmware Version</h4>
+          <br>
+
+          <button class="deviceName">Text Label</button>
+          <button class="openBtn">Open</button>
+          <button class="closeBtn">Close</button>
+
+          <div
+            style="margin: 10% 0 0 2%; color:black; border-width:2px; border-style:solid; border-color:#000; padding-top: 10px;">
+
+            <h5 style="margin: 0 0 5% 3% ;">Current Version</h5>
+            <p style="font-size: small; margin: 0 5% 0% 7%;">Firmware Version:</p>
+            <p class="firmwareVersionLabel" style="font-size: small; margin: 0 5% 5% 7%;">0</p>
+            <p style="font-size: small; margin: 0 5% 0% 7%;">Board Version:</p>
+            <p class="boardVersionLabel" style="font-size: small; margin: 0 5% 5% 7%;">0</p>
+            <p style="font-size: small; margin: 0 5% 0% 7%;">Board ID:</p>
+            <p class="boardIDLabel" style="font-size: small; margin: 0 5% 5% 7%;">0</p>
+            <p style="font-size: small; margin: 0 5% 0% 7%;">Board Type:</p>
+            <p class="boardTypeLabel" style="font-size: small; margin: 0 5% 5% 7%;">0</p>
+          </div>
+
+
+          <h4 class="faq-header">Help and Support</h4>
+          <h5 style="text-align: center; color: black; ">Frequently Asked Questions</h5>
+
+          <div class="faq-container">
+            <div class="faq">
+              <h5><a style="text-decoration: none;"
+                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=68">🌐 Which navX-Model sensor do I
+                  have?</a></h5>
+              <h5><a style="text-decoration: none;"
+                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=52">🌐 How to update
+                  navX-Micro/navX2-Micro Firmware</a></h5>
+              <h5><a style="text-decoration: none;"
+                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=48">🌐 How to update navX-MXP/navX2-MXP
+                  Firmware</a></h5>
+              <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/vmx/kb/faq.php?id=73">🌐 How
+                  to update VMC-pi Firmware</a></h5>
+              <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/supporthome/">🌐 Kauai Labs
+                  Support</a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="tabPanel">
+
+      <div class="container">
+        <div class="modelDevice-container">
+          <div class="modelDevice-item dropdownTwo">
+            <button class="dropdownTwo-btn modelDevice-buttons">Select Device</button>
+            <div class="dropdownTwo-content">
+              <a href="#">COM5</a>
+              <a href="#">Option 2</a>
+              <a href="#">Option 3</a>
+            </div>
+          </div>
+          <div class="modelDevice-item">
+            <button class="modelDevice-buttons">Open</button>
+          </div>
+          <div class="modelDevice-item">
+            <button class="modelDevice-buttons">Close</button>
+          </div>
+        </div>
+        <h4><a style="text-decoration: none; padding-top: 20px;" class="modelDevice-header"
+            href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=26">Detailed Online Instructions</a></h4>
+      </div>
+
+
+      <div>
+        <h4 class="motion-header">Motion Processing</h4>
+        <div>
+          <div class="threshold-container">
+
+            <h4 class="threshold-header">Thresholds</h4>
+
+            <div class="threshold-items">
+              <label style="display:inline-block;" for="linearmotion">Linear Motion</label>
+              <input type="text" id="linearmotion" placeholder="0" />
+              <span class="gHeader">G</span>
+
+              <div class="threshold-containerButtons">
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Set</button>
+                </div>
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="threshold-itemTwo">
+              <label style="display:inline-block;" for="linearmotionTwo">Rotation</label>
+              <input type="text" id="linearmotionTwo" placeholder="0" />
+              <span class="gHeader">Deg/Sec</span>     
+
+              <div class="threshold-containerButtons">
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Set</button>
+                </div>
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Restore Default</button>
+                </div>
+              </div>
+             </div>
+
+             <div class="threshold-itemThree">
+              <label style="display:inline-block;" for="linearmotionThree">Magnetic Disturbance</label>
+              <input type="text" id="linearmotionThree" placeholder="0" />
+              <span class="gHeader">%</span>     
+
+              <div class="threshold-containerButtons">
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Set</button>
+                </div>
+                <div class="threshold-itemButtons">
+                  <button class="threshold-buttons">Restore Default</button>
+                </div>
+              </div>
+             </div>
+
+          <h4 style="position:absolute; margin-top: 35%; margin-left: 5%;">(Lower Values = Higher Sensitivity)</h4>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div>
+        <h4 class="environment-header">Environment</h4>
+        <div>
+          <div class="environment-container">
+
+            <div class="environment-items">
+              <label style="display:inline-block; width:15%;" for="barometricpressure">Sea-Level Barometric Pressure</label>
+              <input type="text" id="barometricpressure" placeholder="0" />
+              <span class="gHeader">millibar</span>
+
+              <div class="environment-containerButtons">
+                <div class="environment-itemButtons">
+                  <button class="environment-buttons">Set</button>
+                </div>
+                <div class="environment-itemButtons">
+                  <button class="environment-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+      
+        <button class="factoryDefaultBtn">Restore to Factory Default</button>
+
+    </div>
+
+
+    <div class="tabPanel">
+
+
+      <h2 style="display:block; padding: 100px 0 0 50px;">NavX Device</h2>
+
+      <div class="container">
+        <h4 class="serialport-header">Serial Port:</h4>
+        <div class="grid-container">
+          <div class="grid-item dropdown">
+            <button class="dropdown-btn serial-buttons">Select Device</button>
+            <div class="dropdown-content">
+              <a href="#">COM5</a>
+              <a href="#">Option 2</a>
+              <a href="#">Option 3</a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <button class="serial-buttons">Open</button>
+          </div>
+          <div class="grid-item">
+            <button class="serial-buttons">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="containerTwo">
+        <div class="output-container">
+          <div class="grid-item">
+            <h5 class="output-text">X = 0</h5>
+          </div>
+          <div class="grid-item">
+            <h5 class="output-text">Y = 0</h5>
+          </div>
+          <div class="grid-item">
+            <h5 class="output-text">Z = 0</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="mag-container">
+        <h4 class="mag-header">Mag. Field Norm Ratio:</h4>
+        <h4 class="mag-field-text">---</h4>
+
+        <h4 class="mag-header">Pitch</h4>
+        <h4 class="mag-field-text">---</h4>
+
+        <h4 class="mag-header">Roll</h4>
+        <h4 class="mag-field-text">---</h4>
+      </div>
+      <hr>
+
+      <div class="wrap">
+        <div class="floatleftTab2">
+
+          <!-- For the X+ section -->
+          <div class="axisXContainer">
+            <h4>Axis X+</h4>
+
+            <div class="xyz-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="ax-container">
+              <div class="ax-item">
+                <p class="ax-text"> Point 0°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 2</p>
+              </div>
+
+              <div class="ax-item">
+                <p class="ax-text"> 3</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 4</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> Point 180°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 7</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 8</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 9</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div>
+          </div>
+
+          <!-- For the y+ section -->
+          <div class="axisXContainer">
+            <h4 style="clear:both; margin: 10% 0% 0 0%;">Axis Y+</h4>
+            <div class="xyz-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="ax-container">
+              <div class="ax-item">
+                <p class="ax-text"> Point 0°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 2</p>
+              </div>
+
+              <div class="ax-item">
+                <p class="ax-text"> 3</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 4</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> Point 180°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 7</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 8</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 9</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- For the Z+ section -->
+          <div class="axisXContainer">
+            <h4 style="clear:both; margin: 10% 0% 0 0%;">Axis Z+</h4>
+            <div class="xyz-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="ax-container">
+              <div class="ax-item">
+                <p class="ax-text"> Point 0°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 2</p>
+              </div>
+
+              <div class="ax-item">
+                <p class="ax-text"> 3</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 4</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> Point 180°</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 7</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 8</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> 9</p>
+              </div>
+              <div class="ax-item">
+                <p class="ax-text"> ?</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="calculateMatrixBtn">Calculate Transformation Matrix and Bias</button>
+
+
+          <div class="container">
+            <h4 class="transformation-matrix-header">Transformation Matrix</h4>
+            <div class="matrix-container">
+              <div class="matrix-item">
+                <span class="m11-text" style="margin-right:5%;">M11=</span>
+                <p class="matrix-text"> 1</p>
+              </div>
+              <div class="matrix-item">
+                <span class="m12-text" style="margin-right:5%;">M12=</span>
+                <p class="matrix-text"> 2</p>
+              </div>
+              <div class="matrix-item">
+                <span class="m13-text" style="margin-right:5%;">M21=</span>
+                <p class="matrix-text"> 3</p>
+              </div>
+              <div class="matrix-item">
+                <span class="m14-text" style="margin-right:5%;">M22=</span>
+                <p class="matrix-text"> 4</p>
+              </div>
+              <div class="matrix-item">
+                <span class="m15-text" style="margin-right:5%;">M31=</span>
+                <p class="matrix-text"> 5</p>
+              </div>
+              <div class="matrix-item">
+                <span class="m16-text" style="margin-right:5%;">M32=</span>
+                <p class="matrix-text"> 6</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="floatrightTab2">
+
+          <!-- For the X- section -->
+          <div class="axisXMinusContainer">
+            <h4 style="clear:both; color:#000">Axis X-</h4>
+            <div class="xyz-right-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="axMinus-container">
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 0°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 2</p>
+              </div>
+
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 3</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 4</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 180°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 7</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 8</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 9</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- For the Y- section -->
+          <div class="axisXMinusContainer">
+            <h4 style="clear:both; margin: 5% 0% 0 0%; color:#000">Axis Y-</h4>
+            <div class="xyz-right-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="axMinus-container">
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 0°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 2</p>
+              </div>
+
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 3</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 4</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 180°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 7</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 8</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 9</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- For the Z- section -->
+          <div class="axisXMinusContainer">
+            <h4 style="clear:both; margin: 5% 0% 0 0%; color:#000">Axis Z-</h4>
+            <div class="xyz-right-header">
+              <span>X</span>
+              <span>Y</span>
+              <span>Z</span>
+            </div>
+            <div class="axMinus-container">
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 0°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 2</p>
+              </div>
+
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 3</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 4</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> Point 180°</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 7</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 8</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> 9</p>
+              </div>
+              <div class="axMinus-item">
+                <p class="axMinus-text"> ?</p>
+              </div>
+            </div>
+
+            <button class="writeToDiskBtn">Write to Disk</button>
+          </div>
+
+          <div>
+            <h4 class="bias-header">Bias </h4>
+            <div class="bias-container">
+              <div class="bias-item">
+                <span class="m11-text" style="margin-right:5%;">M11=</span>
+                <p class="bias-text"> 1</p>
+              </div>
+              <div class="bias-item">
+                <span class="m12-text" style="margin-right:5%;">M12=</span>
+                <p class="bias-text"> 2</p>
+              </div>
+              <div class="bias-item">
+                <span class="m13-text" style="margin-right:5%;">M21=</span>
+                <p class="bias-text"> 3</p>
+              </div>
+              <div class="bias-item">
+                <span class="m14-text" style="margin-right:5%;">M22=</span>
+                <p class="bias-text"> 4</p>
+              </div>
+              <div class="bias-item">
+                <span class="m15-text" style="margin-right:5%;">M31=</span>
+                <p class="bias-text"> 5</p>
+              </div>
+              <div class="bias-item">
+                <span class="m16-text" style="margin-right:5%;">M32=</span>
+                <p class="bias-text"> 6</p>
+              </div>
+
+            </div>
+          </div>
+
+          
+          
+
+        </div>
+
+        
+      </div>
+
+      <div class="containerTwo">
+        <div class="outputFour-container">
+          <div class="gridFour-item">
+            <button class="outputFour-text">Save to navX-Model Device</button>
+          </div>
+          <div class="gridFour-item">
+            <button class="outputFour-text">Retrieve from navX-Model Device</button>
+          </div>
+          <div class="gridFour-item">
+            <button class="outputFour-text">How to use this program?</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tabPanel">Tab 4:Content</div>
+  </div>
+
+  <script src="myScript.js"></script>
+</body>
+
+</html>

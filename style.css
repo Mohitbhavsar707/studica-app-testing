@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: monospace;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    flex-direction: column;
+
+}
+
+.loading-image {
+    height: fit-content;
+    width: fit-content;
+    justify-content: center;
+}
+
+.loading-message {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.loading {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading .line-box {
+    padding: 2px;
+    width: 40%;
+    height: 20px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.loading .line-box .line {
+    height: 20px;
+    border-radius: 20px;
+    background: #005CB9;
+    animation: Loading 2s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+@keyframes Loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.banner{
+    width: 100%;
+justify-content: center;
+background-color: #005CB9;
+
+
+}
+
+.banner-img {
+    max-width: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    font-family: sans-serif;
+    color: #dc2d5e;
+    text-align: center;
+}
+
+
+
+.tabContainer{
+    width: 100%;
+    height: 350px;
+}
+.tabContainer .buttonContainer{
+    height: 15%;
+}
+.tabContainer .buttonContainer button{
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #eee;
+}
+.tabContainer .buttonContainer button:hover{
+    background-color: #d7d4d4;
+}
+.tabContainer .tabPanel{
+    height: 85%;
+    background-color: relative;
+    color: black;
+    /* text-align: center; */
+    /* padding-top: 105px; */
+    /* box-sizing: border-box; */
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+}
+
+button{
+    outline: none;
+    border: none;
+
+    padding: 10px;
+    cursor: pointer;
+    width: 20%;
+    display: block;
+}
+
+
+.wrap {
+    width: 100%;
+    clear: both;
+    }
+    
+
+.firmware-upd-header{
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2%;
+    text-align: center;
+}
+
+.firmware-curr-header{
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2% ;
+    text-align: center;
+}
+
+
+    .floatleft {
+        float:left; 
+         width: 60%;
+        background-color: white;
+        height: 100vh;
+    }
+    
+    .floatright {
+    float: right;
+     background-color: #DFDFDF;
+        color: white;
+        height: 100vh;
+        width: 40%;
+    }
+    
+ 
+
+.firmwareSelectBtn{
+    background-color: #2550A5;
+    color: white;
+    float: left;
+    margin: 0 0 0 1%;
+    position: absolute;
+ 
+}
+
+.troubleShootingBtn{
+    background-color: #2550A5;
+    color: white;
+    float: right ; 
+    margin: 0 2% 0 0%;
+}
+
+.firmware-info h5{
+    margin: 0;
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: none;
+    text-align: left;
+}
+
+.firmware-info p{
+    float: left;
+    margin: 0;
+    font-size: initial;
+
+    
+}
+.circle-container {
+    display: flex;
+    justify-content: space-around;  
+    margin: 5% 5%;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+     border-radius: 50%;
+    background-color: #42453F;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;  
+    line-height: 1.2;  
+    text-align: center;  
+    margin: 0;  
+    box-sizing: border-box;  
+    padding: 10px;  
+  }
+  
+
+.updNavXButton{
+    display: flex;
+    background-color: #2550A5;
+    color: white;
+    margin: 2% 0 0 2%;
+
+}
+
+.deviceName{
+    background-color: #2550A5;
+    color: white;
+    position: absolute;
+    width: 10%;
+    margin: 0% 0 0 2%;
+}
+
+.openBtn{
+    background-color: #2550A5;
+    color: white;
+    float: right;
+    margin: 0 2% 0 0; 
+}
+
+.closeBtn{
+    background-color: #2550A5;
+    color: white;
+    float: right;
+    margin: 0 5% 0 0; 
+}
+
+.faq-header{
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2% ;
+    text-align: center;
+}
+
+
+.faq-container{
+    color: #2550A5;
+    margin: 0 0% 0 5%;
+    font-size: smaller;
+}
+/* 
+a:visited{  
+    color: #2550A5;  
+     }   */

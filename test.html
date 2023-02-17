@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Studica App</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <!-- Banner image for main page -->
+  <div class="banner">
+  <img class="banner-img" src="./studica-white-logo.png" >
+</div>
+
+  <div class="tabContainer">
+    <div class="buttonContainer">
+      <button class="tabButton" onclick="showPanel(0)">Hardwar</button>
+      <button class="tabButton" onclick="showPanel(1)">Downloads</button>
+      <button class="tabButton" onclick="showPanel(2)">User Guide</button>
+      <button class="tabButton" onclick="showPanel(3)">About</button>
+    </div>
+
+    <div class="tabPanel">
+
+      <div class="wrap">
+        <div class="floatleft">
+          <h4 class="firmware-upd-header"> Firmware Updater </h4>
+
+          
+            <button class="firmwareSelectBtn">Select navX-Model firmware to load</button>
+            <button class="troubleShootingBtn">Troubleshooting Tips</button>
+
+            <!-- <p style="font-size: small; position: relative; margin: 3%; left:45%; ">Text for deviceDirectory</p> -->
+            
+            <div style="margin: 0%; color:black"> 
+                
+                <h5 style="margin: 10% 0 0% 2% ;">Manufacturer</h5>
+                <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for manufacturing info</p> 
+
+
+                <h5 style="margin: 5% 0 0% 2%  ;">Model</h5>
+                <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for model info</p>
+
+                <h5 style="margin: 5% 0 0% 2%  ;">Version</h5>
+                <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for version info</p>
+
+                <h4 style=" justify-content:center; text-align: center; ">Process</h4>
+                <p style=" font-size:small; justify-content:center; text-align:center;">To update navX-Model Firmware, the device must be in Firmware Update Mode</p>
+               </div>
+
+           <!-- Circles container -->
+           <div class="circle-container">
+            <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                    padding-bottom: 5px;">1<br></span> Disconnect the navX-Model device from the PC USB port</span>
+            </div>
+            <div class="circle">
+              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                padding-bottom: 5px;">2<br></span> Ensure the device has completely powered down (the RED “3.3V LED must be off).</span>
+            </div>
+            <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                    padding-bottom: 5px;">3<br></span> While holding down the ‘CAL’ button, re-connect the board to the PC USB port.</span>
+            </div>
+            <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                    padding-bottom: 5px;">4<br></span>  After the board has powered up, release the ‘CAL’ button.</span>
+            </div>
+          </div>
+
+
+          <button class="updNavXButton">Update navX-Model Firmware</button>
+
+          <h5 style="margin: 1% 0 0 2%;">Status:</h5>
+
+
+        </div>
+
+        <div class="floatright">
+          <h4 class="firmware-curr-header">Current Firmware Version</h4>
+          <br>
+
+          <button class="deviceName">Text Label</button>
+          <button class="openBtn">Open</button>
+         <button class="closeBtn">Close</button>
+
+         <div style="margin: 10% 0 0 2%; color:black; border-width:2px; border-style:solid; border-color:#000; padding-top: 10px;"> 
+
+         <h5 style="margin: 0 0 5% 3% ;">Current Version</h5>
+         <p style="font-size: small; margin: 0 5% 0% 7%;">Firmware Version:</p> <p class="firmwareVersionLabel" style="font-size: small; margin: 0 5% 5% 7%;" >0</p>
+         <p style="font-size: small; margin: 0 5% 0% 7%;">Board Version:</p> <p class="boardVersionLabel" style="font-size: small; margin: 0 5% 5% 7%;" >0</p>
+         <p style="font-size: small; margin: 0 5% 0% 7%;">Board ID:</p> <p class="boardIDLabel" style="font-size: small; margin: 0 5% 5% 7%;" >0</p>
+         <p style="font-size: small; margin: 0 5% 0% 7%;">Board Type:</p> <p class="boardTypeLabel" style="font-size: small; margin: 0 5% 5% 7%;" >0</p>
+        </div>
+
+
+        <h4 class="faq-header">Help and Support</h4>
+        <h5 style="text-align: center; color: black; ">Frequently Asked Questions</h5>
+
+        <div class="faq-container">
+          <div class="faq">
+            <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=68">🌐 Which navX-Model sensor do I have?</a></h5>
+            <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=52">🌐 How to update navX-Micro/navX2-Micro Firmware</a></h5>
+            <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=48">🌐 How to update navX-MXP/navX2-MXP Firmware</a></h5>
+            <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/vmx/kb/faq.php?id=73">🌐 How to update VMC-pi Firmware</a></h5>
+            <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/supporthome/">🌐 Kauai Labs Support</a></h5>
+           </div>
+        </div>
+    </div>
+
+    
+
+         
+    </div>
+
+
+    <div class="tabPanel">Downloads</div>
+    <div class="tabPanel">Telemetry</div>
+    <div class="tabPanel">About Studica</div>
+  </div>
+
+  <script>
+    require('./renderer.js')
+
+    var tabButtons = document.querySelectorAll(".tabContainer .buttonContainer .tabButton");
+    var tabPanels = document.querySelectorAll(".tabContainer  .tabPanel");
+
+    function showPanel(panelIndex) {
+      console.log("This resize function is being called")
+      tabPanels.forEach(function (node) {
+        node.style.display = "none";
+      });
+      tabPanels[panelIndex].style.display = "block";
+    }
+
+    function resizeButtons() {
+      console.log("This resize function is being called")
+      var windowWidth = window.innerWidth;
+      var buttonWidth = windowWidth / tabButtons.length;
+
+      tabButtons.forEach(function (tabButton) {
+        tabButton.style.width = buttonWidth + "px";
+      });
+    }
+
+    window.addEventListener("resize", resizeButtons);
+    resizeButtons();
+    showPanel(0);
+
+ 
+  </script>
+
+</body>
+
+</html>

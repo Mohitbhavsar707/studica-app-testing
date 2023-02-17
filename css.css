@@ -1,0 +1,914 @@
+.title {
+    font-family: sans-serif;
+    color: #dc2d5e;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #3a6cd0;
+    color: white;
+
+}
+
+.tabContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.tabContainer .buttonContainer {
+    height: 15%;
+}
+
+.tabContainer .buttonContainer button {
+    width: 25%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+    background-color: #2550A5;
+    color: white;
+}
+
+.tabContainer .buttonContainer button:hover {
+    background-color: #d7d4d4;
+    color: black;
+}
+
+.tabContainer .tabPanel {
+    height: 85%;
+    background-color: relative;
+    color: black;
+    /* text-align: center; */
+    /* padding-top: 105px; */
+    /* box-sizing: border-box; */
+    font-family: sans-serif;
+    font-size: 22px;
+    display: none;
+}
+
+button {
+    outline: none;
+    border: none;
+
+    padding: 10px;
+    cursor: pointer;
+    width: 20%;
+    display: block;
+}
+
+
+.wrap {
+    width: 100%;
+    clear: both;
+}
+
+
+.firmware-upd-header {
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2%;
+    text-align: center;
+}
+
+.firmware-curr-header {
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2%;
+    text-align: center;
+}
+
+
+.floatleft {
+    float: left;
+    width: 60%;
+    background-color: white;
+    height: 100vh;
+}
+
+.floatright {
+    float: right;
+    background-color: #DFDFDF;
+    color: white;
+    height: 100vh;
+    width: 40%;
+}
+
+
+
+.firmwareSelectBtn {
+    background-color: #2550A5;
+    color: white;
+    float: left;
+    margin: 0 0 0 1%;
+    position: absolute;
+
+}
+
+.troubleShootingBtn {
+    background-color: #2550A5;
+    color: white;
+    float: right;
+    margin: 0 2% 0 0%;
+}
+
+.firmware-info h5 {
+    margin: 0;
+    display: block;
+    float: left;
+    font-size: 20px;
+    padding: none;
+    text-align: left;
+}
+
+.firmware-info p {
+    float: left;
+    margin: 0;
+    font-size: initial;
+
+
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 5%;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #42453F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+
+.updNavXButton {
+    display: flex;
+    background-color: #2550A5;
+    color: white;
+    margin: 2% 0 0 2%;
+
+}
+
+.deviceName {
+    background-color: #2550A5;
+    color: white;
+    position: absolute;
+    width: 10%;
+    margin: 0% 0 0 2%;
+}
+
+.openBtn {
+    background-color: #2550A5;
+    color: white;
+    float: right;
+    margin: 0 2% 0 0;
+}
+
+.closeBtn {
+    background-color: #2550A5;
+    color: white;
+    float: right;
+    margin: 0 5% 0 0;
+}
+
+.faq-header {
+    display: block;
+    background-color: #DE980F;
+    padding: 2%;
+    color: white;
+    margin: 2%;
+    text-align: center;
+}
+
+
+.faq-container {
+    color: #2550A5;
+    margin: 0 0% 0 5%;
+    font-size: smaller;
+}
+
+/* 
+a:visited{  
+    color: #2550A5;  
+     }   */
+
+.serialport-header {
+    display: flex;
+    float: left;
+    width: 20%;
+    justify-content: center;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 80%;
+    float: right;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.serial-buttons {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.dropdown-content {
+    font-size: 2vh;
+    width: 90%;
+    margin: 40% 0 0 0%;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #a9a9a9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.output-container {
+    display: grid;
+    margin-top: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    min-width: 40%;
+}
+
+.output-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #42453F;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5%;
+    margin-bottom: 15%;
+    width: 85%;
+}
+
+.output-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.mag-container {
+    display: flex;
+    float: left;
+    width: 100%;
+}
+
+.mag-header {
+    float: left;
+    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.mag-field-text {
+    justify-content: center;
+    background-color: #D9D9D9;
+    padding: 10px;
+    width: 15%;
+    margin-left: 10px;
+}
+
+
+.floatleftTab2 {
+    float: left;
+    width: 50%;
+    height: 100vh;
+}
+
+.floatrightTab2 {
+    float: right;
+    color: white;
+    height: 100vh;
+    width: 50%;
+
+}
+
+/* Left side */
+
+.axisXContainer {
+    margin-left: 5%
+}
+
+.ax-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 80%;
+    float: left;
+    grid-row-gap: 0px;
+    grid-column-gap: 5px;
+    margin-bottom: 10%;
+}
+
+.ax-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.ax-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.xyz-header {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    margin-left: 25%;
+    font-weight: bold;
+}
+
+
+/* Right side  */
+
+.axisXMinusContainer {
+    margin-left: 5%
+}
+
+.axMinus-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 80%;
+    float: left;
+    grid-row-gap: 0px;
+    grid-column-gap: 5px;
+    margin-bottom: 10%;
+
+}
+
+.axMinus-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.axMinus-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.xyz-right-header {
+    display: grid;
+    grid-template-columns: repeat(3, 110px);
+    margin-left: 25%;
+    font-weight: bold;
+    color: black;
+}
+
+
+.calculateMatrixBtn {
+    margin-left: 5%;
+    display: block;
+    width: 75%;
+    padding: 20px;
+    color: white;
+    background-color: #2550A5;
+    height: 100px;
+    font-size: large;
+}
+
+.writeToDiskBtn {
+    display: block;
+    width: 80%;
+    padding: 20px;
+    color: white;
+    background-color: #2550A5;
+    height: 100px;
+    font-size: large;
+}
+
+
+.transformation-matrix-header{
+    margin-left: 5%;
+}
+
+
+.matrix-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: left;
+    grid-row-gap: 0px;
+    grid-column-gap: 100px;
+    margin-left: 25%;
+
+}
+
+.matrix-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+
+}
+
+.matrix-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5%;
+    width: 90%;
+}
+
+
+
+.bias-header{
+    margin-left: 5%;
+    color: black;
+}
+
+
+.bias-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: left;
+    grid-row-gap: 0px;
+    grid-column-gap: 100px;
+    margin-left: 25%;
+
+}
+
+.bias-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    color: black;
+
+}
+
+.bias-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5%;
+    width: 90%;
+}
+
+
+
+/* Model Device Config Section */
+
+.modelDevice-header {
+    display: flex;
+    float: right;
+    width: 30%;
+    justify-content: center;
+
+}
+
+.modelDevice-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: left;
+    margin-left: 1%;
+}
+
+.modelDevice-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.modelDevice-buttons {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.dropdownTwo {
+    position: relative;
+}
+
+.dropdownTwo-btn {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5%;
+    width: 90%;
+}
+
+.dropdownTwo-content {
+    font-size: 2vh;
+    width: 90%;
+    margin: 40% 0 0 0%;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdownTwo-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdownTwo-content a:hover {
+    background-color: #a9a9a9;
+}
+
+.dropdownTwo:hover .dropdownTwo-content {
+    display: block;
+}
+
+.motion-header{
+    position: absolute;
+    display: block;
+    margin-top: 8%;
+    margin-left: 2%;
+    width: 90%;
+    background-color: #DE980F;
+    padding: 20px;
+    color: white;
+ }
+
+.threshold-container{
+    /* position: absolute; */
+}
+
+ .threshold-header{
+    position: absolute;
+    margin-top: 15%;
+    color: black;
+    margin-left: 5%;
+  }
+
+  .threshold-items{
+    position: absolute;
+    margin-top: 17%;
+    margin-left: 4%;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+ 
+  #linearmotion{
+    width: 20%;
+    margin-left: 10%;
+    background-color: #a9a9a9;
+  }
+
+
+ 
+  
+
+  .threshold-containerButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: right;
+    grid-column-gap: 10px;
+    margin-right: 12%;
+   }
+
+.threshold-itemButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+ }
+
+.threshold-buttons {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5%;
+    width: 100%;
+
+}
+
+/* Threshold Item 2 */
+
+.threshold-itemTwo{
+    position: absolute;
+    margin-top: 23%;
+    margin-left: 4%;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+  .threshold-containerTwo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: right;
+    grid-column-gap: 10px;
+    margin-right: 12%;
+   }
+
+   #linearmotionTwo{
+    width: 20%;
+    margin-left: 14%;
+    background-color: #a9a9a9;
+  }
+
+/* Threshold Item 3*/
+
+.threshold-itemThree{
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 4%;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+  .threshold-containerTwo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: right;
+    grid-column-gap: 10px;
+    margin-right: 12%;
+   }
+
+   #linearmotionThree{
+    width: 20%;
+    margin-left: 5%;
+    background-color: #a9a9a9;
+  }
+
+/* Environment Section */
+
+  .environment-header{
+    position: absolute;
+    display: block;
+    margin-top: 40%;
+    margin-left: 2%;
+    width: 90%;
+    background-color: #DE980F;
+    padding: 20px;
+    color: white;
+ }
+
+
+
+  .environment-items{
+    position: absolute;
+    margin-top: 47%;
+    margin-left: 4%;
+    width: 100%;
+    padding: 20px;
+    color: black;
+  }
+
+ 
+  #barometricpressure{
+    width: 20%;
+    margin-left: 2%;
+    background-color: #a9a9a9;
+  }
+
+
+ 
+  
+
+  .environment-containerButtons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    width: 40%;
+    float: right;
+    grid-column-gap: 10px;
+    margin-right: 12%;
+   }
+
+.environment-itemButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    
+ }
+
+.environment-buttons {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5%;
+    width: 100%;
+
+}
+
+.factoryDefaultBtn{
+    width: 95%;
+    padding: 50px;
+    background-color: #2550A5;
+margin-top: 60%;
+margin-left: 2%;
+margin-bottom: 10%;
+color:white;
+font-size: 20px;
+font-weight: bold;
+display: block;
+}
+
+
+
+ 
+.outputFour-container {
+    display: grid;
+    margin-top: 80%;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    min-width: 40%;
+}
+
+.outputFour-text {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #2550A5;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5%;
+    margin-bottom: 15%;
+    width: 85%;
+}
+
+.gridFour-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
