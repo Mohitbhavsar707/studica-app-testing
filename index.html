@@ -24,7 +24,79 @@ margin-right: auto;">
     </div>
 
 
+
+
     <div class="tabPanel">
+
+
+      <!-- Alert popup section -->
+
+      <button id="myButton">Click me</button>
+
+      <style>
+        .alert-popup {
+          height: 20%;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #777373;
+          /* padding: 5% 10%; */
+          box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+          z-index: 999;
+          display: block;
+          color: white;
+          width: 40%;
+          justify-content: center;
+          text-align: center;
+        }
+        
+        .alert-header {
+          font-weight: bold;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+      
+        .close-button {
+          position: absolute;
+          top: 5px;
+          right: 10px;
+          font-size: 18px;
+          font-weight: bold;
+          background: none;
+          border: none;
+          color: white;
+          cursor: pointer;
+        }
+      </style>
+      
+      
+      <script>
+        // Get the button element
+        const button = document.getElementById('myButton');
+        
+        // Add a click event listener to the button
+        button.addEventListener('click', () => {
+          // Create the alert popup
+          const popup = document.createElement('div');
+          popup.classList.add('alert-popup');
+          popup.innerHTML = '<button class="close-button">&times;</button><h2 class="alert-header">Alert</h2><p>Custom alert message</p>';
+        
+          // Add the popup to the document
+          document.body.appendChild(popup);
+        
+          // Get the close button element
+          const closeButton = popup.querySelector('.close-button');
+        
+          // Add a click event listener to the close button
+          closeButton.addEventListener('click', () => {
+            // Remove the popup from the document
+            popup.remove();
+          });
+        });
+      </script>
+      
+
+
 
       <div class="wrap">
         <div class="floatleft">
@@ -33,6 +105,14 @@ margin-right: auto;">
 
           <button class="firmwareSelectBtn">Select navX-Model firmware to load</button>
           <button class="troubleShootingBtn">Troubleshooting Tips</button>
+
+
+         
+      
+
+
+
+
 
           <!-- <p style="font-size: small; position: relative; margin: 3%; left:45%; ">Text for deviceDirectory</p> -->
 
@@ -90,6 +170,8 @@ margin-right: auto;">
           <h4 class="firmware-curr-header">Current Firmware Version</h4>
           <br>
 
+
+          
           <button class="deviceName">Text Label</button>
           <button class="openBtn">Open</button>
           <button class="closeBtn">Close</button>
