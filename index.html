@@ -49,13 +49,13 @@ margin-right: auto;">
           justify-content: center;
           text-align: center;
         }
-        
+
         .alert-header {
           font-weight: bold;
           font-size: 18px;
           margin-bottom: 10px;
         }
-      
+
         .close-button {
           position: absolute;
           top: 5px;
@@ -68,25 +68,25 @@ margin-right: auto;">
           cursor: pointer;
         }
       </style>
-      
-      
+
+
       <script>
         // Get the button element
         const button = document.getElementById('myButton');
-        
+
         // Add a click event listener to the button
         button.addEventListener('click', () => {
           // Create the alert popup
           const popup = document.createElement('div');
           popup.classList.add('alert-popup');
           popup.innerHTML = '<button class="close-button">&times;</button><h2 class="alert-header">Alert</h2><p>Custom alert message</p>';
-        
+
           // Add the popup to the document
           document.body.appendChild(popup);
-        
+
           // Get the close button element
           const closeButton = popup.querySelector('.close-button');
-        
+
           // Add a click event listener to the close button
           closeButton.addEventListener('click', () => {
             // Remove the popup from the document
@@ -94,7 +94,7 @@ margin-right: auto;">
           });
         });
       </script>
-      
+
 
 
 
@@ -107,8 +107,8 @@ margin-right: auto;">
           <button class="troubleShootingBtn">Troubleshooting Tips</button>
 
 
-         
-      
+
+
 
 
 
@@ -163,7 +163,7 @@ margin-right: auto;">
 
           </div>
 
- 
+
         </div>
 
         <div class="floatright">
@@ -171,7 +171,7 @@ margin-right: auto;">
           <br>
 
 
-          
+
           <button class="deviceName">Text Label</button>
           <button class="openBtn">Open</button>
           <button class="closeBtn">Close</button>
@@ -196,19 +196,32 @@ margin-right: auto;">
 
           <div class="faq-container">
             <div class="faq">
-              <h5><a style="text-decoration: none;"
-                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=68">🌐 Which navX-Model sensor do I
-                  have?</a></h5>
-              <h5><a style="text-decoration: none;"
-                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=52">🌐 How to update
-                  navX-Micro/navX2-Micro Firmware</a></h5>
-              <h5><a style="text-decoration: none;"
-                  href="https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=48">🌐 How to update navX-MXP/navX2-MXP
-                  Firmware</a></h5>
-              <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/support/vmx/kb/faq.php?id=73">🌐 How
-                  to update VMC-pi Firmware</a></h5>
-              <h5><a style="text-decoration: none;" href="https://www.kauailabs.com/supporthome/">🌐 Kauai Labs
-                  Support</a></h5>
+              <h5 style="text-decoration: none; cursor:pointer;" onclick="faqOpenOne()">🌐 Which navX-Model sensor do I
+                have?</h5>
+              <script> function faqOpenOne() { window.open("https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=68"); }</script>
+
+              <h5 style="text-decoration: none; cursor:pointer;" onclick="faqOpenTwo()">🌐 How to update
+                navX-Micro/navX2-Micro Firmware</h5>
+              <script> function faqOpenTwo() { window.open("https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=52"); }</script>
+
+              <h5 style="text-decoration: none; cursor:pointer;" onclick="faqOpenThree()">🌐 How to update
+                navX-MXP/navX2-MXP
+                Firmware</h5>
+              <script> function faqOpenThree() { window.open("https://www.kauailabs.com/support/navx-mxp/kb/faq.php?id=48"); }</script>
+
+
+              <h5 style="text-decoration: none; cursor:pointer;" onclick="faqOpenFour()">🌐 How
+                to update VMC-pi Firmware</h5>
+              <script> function faqOpenFour() { window.open("https://www.kauailabs.com/support/vmx/kb/faq.php?id=73"); }</script>
+
+
+              <h5 style="text-decoration: none; cursor:pointer;" onclick="faqOpenFive()">🌐 Kauai Labs
+                Support</h5>
+              <script> function faqOpenFive() { window.open("https://www.kauailabs.com/supporthome/"); }</script>
+
+
+
+
             </div>
           </div>
         </div>
@@ -265,7 +278,7 @@ margin-right: auto;">
             <div class="threshold-itemTwo">
               <label style="display:inline-block;" for="linearmotionTwo">Rotation</label>
               <input type="text" id="linearmotionTwo" placeholder="0" />
-              <span class="gHeader">Deg/Sec</span>     
+              <span class="gHeader">Deg/Sec</span>
 
               <div class="threshold-containerButtons">
                 <div class="threshold-itemButtons">
@@ -275,12 +288,12 @@ margin-right: auto;">
                   <button class="threshold-buttons">Restore Default</button>
                 </div>
               </div>
-             </div>
+            </div>
 
-             <div class="threshold-itemThree">
+            <div class="threshold-itemThree">
               <label style="display:inline-block;" for="linearmotionThree">Magnetic Disturbance</label>
               <input type="text" id="linearmotionThree" placeholder="0" />
-              <span class="gHeader">%</span>     
+              <span class="gHeader">%</span>
 
               <div class="threshold-containerButtons">
                 <div class="threshold-itemButtons">
@@ -290,9 +303,9 @@ margin-right: auto;">
                   <button class="threshold-buttons">Restore Default</button>
                 </div>
               </div>
-             </div>
+            </div>
 
-          <h4 style="position:absolute; margin-top: 35%; margin-left: 5%;">(Lower Values = Higher Sensitivity)</h4>
+            <h4 style="position:absolute; margin-top: 35%; margin-left: 5%;">(Lower Values = Higher Sensitivity)</h4>
           </div>
         </div>
       </div>
@@ -305,7 +318,8 @@ margin-right: auto;">
           <div class="environment-container">
 
             <div class="environment-items">
-              <label style="display:inline-block; width:15%;" for="barometricpressure">Sea-Level Barometric Pressure</label>
+              <label style="display:inline-block; width:15%;" for="barometricpressure">Sea-Level Barometric
+                Pressure</label>
               <input type="text" id="barometricpressure" placeholder="0" />
               <span class="gHeader">millibar</span>
 
@@ -318,12 +332,12 @@ margin-right: auto;">
                 </div>
               </div>
             </div>
-            </div>
           </div>
         </div>
+      </div>
 
-      
-        <button class="factoryDefaultBtn">Restore to Factory Default</button>
+
+      <button class="factoryDefaultBtn">Restore to Factory Default</button>
 
     </div>
 
@@ -717,12 +731,12 @@ margin-right: auto;">
             </div>
           </div>
 
-          
-          
+
+
 
         </div>
 
-        
+
       </div>
 
       <div class="containerTwo">
