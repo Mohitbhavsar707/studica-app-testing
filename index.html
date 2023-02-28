@@ -109,59 +109,76 @@ margin-right: auto;">
 
 
 
+          <h2 style="position:relative;
+          display:flex;
+          margin-top: 100px;">Downloads</h1>
+
+            <p id="verionNumberText" 
+            
+            style="position: relative;
+                   display: flex;
+                   margin-left: 10px; cursor:pointer;"> version Line update text here</p>
+
+            <script>
+              document.getElementById("verionNumberText").addEventListener("click", selectedUpdateFile);
+
+              function selectedUpdateFile() {
+                document.getElementById("verionNumberText").innerHTML = " number updated now";
+              }
+            </script>
 
 
 
 
 
-          <!-- <p style="font-size: small; position: relative; margin: 3%; left:45%; ">Text for deviceDirectory</p> -->
+            <!-- <p style="font-size: small; position: relative; margin: 3%; left:45%; ">Text for deviceDirectory</p> -->
 
-          <div style="margin: 0%; color:black">
+            <!-- <div style="margin: 0%; color:black">
 
-            <h5 style="margin: 10% 0 0% 2% ;">Manufacturer</h5>
-            <p class style="font-size: small; margin: 2% 0% 0 2%;">Insert text for manufacturing info</p>
+              <h5 style="margin: 10% 0 0% 2% ;">Manufacturer</h5>
+              <p class style="font-size: small; margin: 2% 0% 0 2%;">Insert text for manufacturing info</p>
 
 
-            <h5 style="margin: 5% 0 0% 2%  ;">Model</h5>
-            <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for model info</p>
+              <h5 style="margin: 5% 0 0% 2%  ;">Model</h5>
+              <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for model info</p>
 
-            <h5 style="margin: 5% 0 0% 2%  ;">Version</h5>
-            <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for version info</p>
+              <h5 style="margin: 5% 0 0% 2%  ;">Version</h5>
+              <p style="font-size: small; margin: 2% 0% 0 2%;">Insert text for version info</p>
 
-            <h4 style=" justify-content:center; text-align: center; ">Process</h4>
-            <p style=" font-size:small; justify-content:center; text-align:center;">To update navX-Model Firmware, the
-              device must be in Firmware Update Mode</p>
-          </div>
+              <h4 style=" justify-content:center; text-align: center; ">Process</h4>
+              <p style=" font-size:small; justify-content:center; text-align:center;">To update navX-Model Firmware, the
+                device must be in Firmware Update Mode</p>
+            </div> -->
 
-          <!-- Circles container -->
-          <div class="circle-container">
-            <div class="circle">
-              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+            <!-- Circles container -->
+            <div class="circle-container">
+              <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
                         padding-bottom: 5px;">1<br></span> Disconnect the navX-Model device from the PC USB port</span>
-            </div>
-            <div class="circle">
-              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+              </div>
+              <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
                     padding-bottom: 5px;">2<br></span> Ensure the device has completely powered down (the RED “3.3V LED
-                must be off).</span>
-            </div>
-            <div class="circle">
-              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                  must be off).</span>
+              </div>
+              <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
                         padding-bottom: 5px;">3<br></span> While holding down the ‘CAL’ button, re-connect the board to
-                the PC USB port.</span>
-            </div>
-            <div class="circle">
-              <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
+                  the PC USB port.</span>
+              </div>
+              <div class="circle">
+                <span><span style="font-weight: bold; font-size:large; text-decoration: underline white ; display: block;
                         padding-bottom: 5px;">4<br></span> After the board has powered up, release the ‘CAL’
-                button.</span>
+                  button.</span>
+              </div>
             </div>
-          </div>
 
 
-          <button class="updNavXButton">Update navX-Model Firmware</button>
-          <h5 style="display:relative;">Status:</h5>
-          <div style="background-color:black; padding-bottom: 100px;">
+            <button class="updNavXButton">Update navX-Model Firmware</button>
+            <h5 style="display:relative;">Status:</h5>
+            <div style="background-color:black; padding-bottom: 100px;">
 
-          </div>
+            </div>
 
 
         </div>
@@ -228,6 +245,8 @@ margin-right: auto;">
       </div>
     </div>
 
+
+    <!-- Start of second tab - device config page -->
 
     <div class="tabPanel">
 
@@ -340,6 +359,10 @@ margin-right: auto;">
       <button class="factoryDefaultBtn">Restore to Factory Default</button>
 
     </div>
+
+
+<!-- Start of third tab -->
+
 
 
     <div class="tabPanel">
@@ -755,7 +778,117 @@ margin-right: auto;">
 
     </div>
 
-    <div class="tabPanel">Tab 4:Content</div>
+    <div class="tabPanel">
+
+
+      <!-- First Screenshot -->
+      <div>
+        <h4 class="motion-header">Full Scale Ranges</h4>
+        <div>
+          <div class="ranges-container">
+
+ 
+            <div class="ranges-items">
+              <label style="display:inline-block;" for="rangeOne">Gyro Range</label>
+              <input type="text" id="rangeOne" placeholder="0" />
+              <span class="gHeader">Deg/Sec</span>
+
+              <div class="ranges-containerButtons">
+                <div class="ranges-itemButtons">
+                  <button class="ranges-buttons">Set</button>
+                </div>
+                <div class="ranges-itemButtons">
+                  <button class="ranges-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="ranges-itemTwo">
+              <label style="display:inline-block;" for="rangeTwo">Accel Range</label>
+              <input type="text" id="rangeTwo" placeholder="0" />
+              <span class="gHeader">G</span>
+
+              <div class="ranges-containerButtons">
+                <div class="ranges-itemButtons">
+                  <button class="ranges-buttons">Set</button>
+                </div>
+                <div class="ranges-itemButtons">
+                  <button class="ranges-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+
+
+           </div>
+        </div>
+
+
+        <!-- //Second Screenshot stuff - Accelerometer Calibration -->
+
+        <h4 class="accelCal-header">Accelerometer Calibrator</h4>
+
+
+          <div class="accelStateOne">
+          <label for="accelCalState">Accel Cal.State</label>
+          <input type="text" id="accelCalState" placeholder="0">
+        </div>
+
+        <div class="accelStateTwo">
+          <label for="accelCalState">Accel Cal.Quality</label>
+          <input type="text" id="accelCalState" placeholder="0">
+
+        </div>
+
+        <button style="position: absolute; margin-top: 50%; margin-left: 5%;">Start calibration</button>
+        <button style="position: absolute; margin-top: 50%; margin-left: 35%;">Cancel calibration</button>
+
+  
+
+        <!-- Third Screenshot -->
+
+        <h4 class="sensorFusion-header">Sensor Fusion</h4>
+        <div>
+          <div class="fusion-container">
+
+ 
+            <div class="fusion-items">
+              <label style="display:inline-block;" for="coefficientsOne">Gyro Scale Factor Ratio</label>
+              <input type="text" id="coefficientsOne" placeholder="0" />
+              <span class="gHeader">0.9-1.1</span>
+
+              <div class="fusion-containerButtons">
+                <div class="fusion-itemButtons">
+                  <button class="fusion-buttons">Set</button>
+                </div>
+                <div class="fusion-itemButtons">
+                  <button class="fusion-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="fusion-itemTwo">
+              <label style="display:inline-block;" for="coefficientsTwo">Max. Gyro Error (Deg/Sec)</label>
+              <input type="text" id="coefficientsTwo" placeholder="0" />
+              <span class="gHeader">.001-10.0</span>
+
+              <div class="fusion-containerButtons">
+                <div class="fusion-itemButtons">
+                  <button class="fusion-buttons">Set</button>
+                </div>
+                <div class="fusion-itemButtons">
+                  <button class="fusion-buttons">Restore Default</button>
+                </div>
+              </div>
+            </div>
+
+
+ 
+
+      </div>
+
+
+
+    </div>
   </div>
 
   <script src="myScript.js"></script>
